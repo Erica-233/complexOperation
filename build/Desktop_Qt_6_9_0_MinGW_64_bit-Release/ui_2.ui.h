@@ -22,7 +22,7 @@
 
 QT_BEGIN_NAMESPACE
 
-class Ui_MainWindow
+class Ui_mainWindow
 {
 public:
     QWidget *centralWidget;
@@ -44,12 +44,12 @@ public:
     QLabel *resultLabel;
     QTextEdit *resultEdit;
 
-    void setupUi(QMainWindow *MainWindow)
+    void setupUi(QMainWindow *mainWindow)
     {
-        if (MainWindow->objectName().isEmpty())
-            MainWindow->setObjectName("MainWindow");
-        MainWindow->resize(500, 400);
-        centralWidget = new QWidget(MainWindow);
+        if (mainWindow->objectName().isEmpty())
+            mainWindow->setObjectName("mainWindow");
+        mainWindow->resize(500, 400);
+        centralWidget = new QWidget(mainWindow);
         centralWidget->setObjectName("centralWidget");
         verticalLayout = new QVBoxLayout(centralWidget);
         verticalLayout->setObjectName("verticalLayout");
@@ -134,30 +134,30 @@ public:
 
         verticalLayout->addWidget(resultEdit);
 
-        MainWindow->setCentralWidget(centralWidget);
+        mainWindow->setCentralWidget(centralWidget);
 
-        retranslateUi(MainWindow);
+        retranslateUi(mainWindow);
 
-        QMetaObject::connectSlotsByName(MainWindow);
+        QMetaObject::connectSlotsByName(mainWindow);
     } // setupUi
 
-    void retranslateUi(QMainWindow *MainWindow)
+    void retranslateUi(QMainWindow *mainWindow)
     {
-        MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
-        num1Label->setText(QCoreApplication::translate("MainWindow", "\347\254\254\344\270\200\344\270\252\345\244\247\346\225\260\357\274\232", nullptr));
-        num2Label->setText(QCoreApplication::translate("MainWindow", "\347\254\254\344\272\214\344\270\252\345\244\247\346\225\260\357\274\232", nullptr));
-        decimalLabel->setText(QCoreApplication::translate("MainWindow", "\344\277\235\347\225\231\345\260\217\346\225\260\344\275\215\346\225\260\357\274\232", nullptr));
-        addButton->setText(QCoreApplication::translate("MainWindow", "\345\212\240\346\263\225 (+)", nullptr));
-        subButton->setText(QCoreApplication::translate("MainWindow", "\345\207\217\346\263\225 (-)", nullptr));
-        mulButton->setText(QCoreApplication::translate("MainWindow", "\344\271\230\346\263\225 (*)", nullptr));
-        divButton->setText(QCoreApplication::translate("MainWindow", "\351\231\244\346\263\225 (/)", nullptr));
-        resultLabel->setText(QCoreApplication::translate("MainWindow", "\347\273\223\346\236\234\357\274\232", nullptr));
+        mainWindow->setWindowTitle(QCoreApplication::translate("mainWindow", "MainWindow", nullptr));
+        num1Label->setText(QCoreApplication::translate("mainWindow", "\347\254\254\344\270\200\344\270\252\345\244\247\346\225\260\357\274\232", nullptr));
+        num2Label->setText(QCoreApplication::translate("mainWindow", "\347\254\254\344\272\214\344\270\252\345\244\247\346\225\260\357\274\232", nullptr));
+        decimalLabel->setText(QCoreApplication::translate("mainWindow", "\344\277\235\347\225\231\345\260\217\346\225\260\344\275\215\346\225\260\357\274\232", nullptr));
+        addButton->setText(QCoreApplication::translate("mainWindow", "\345\212\240\346\263\225 (+)", nullptr));
+        subButton->setText(QCoreApplication::translate("mainWindow", "\345\207\217\346\263\225 (-)", nullptr));
+        mulButton->setText(QCoreApplication::translate("mainWindow", "\344\271\230\346\263\225 (*)", nullptr));
+        divButton->setText(QCoreApplication::translate("mainWindow", "\351\231\244\346\263\225 (/)", nullptr));
+        resultLabel->setText(QCoreApplication::translate("mainWindow", "\347\273\223\346\236\234\357\274\232", nullptr));
     } // retranslateUi
 
 };
 
 namespace Ui {
-    class MainWindow: public Ui_MainWindow {};
+    class mainWindow: public Ui_mainWindow {};
 } // namespace Ui
 
 QT_END_NAMESPACE
